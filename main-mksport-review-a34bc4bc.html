@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>mk体育 · 资料整理与信息索引</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #f4f9fc;
+      color: #1c2e3a;
+      line-height: 1.6;
+      padding: 0 1rem 2.5rem 1rem;
+    }
+
+    .page-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* hero 开场短句 */
+    .hero {
+      background: linear-gradient(145deg, #d9eff2 0%, #e0f0f3 100%);
+      border-radius: 2.5rem 2.5rem 1.5rem 1.5rem;
+      padding: 2.8rem 2rem;
+      margin: 1.8rem 0 2rem 0;
+      box-shadow: 0 8px 18px -8px rgba(52, 117, 125, 0.15);
+      text-align: center;
+    }
+
+    .hero em {
+      display: inline-block;
+      font-style: normal;
+      background: #2b7a7e;
+      color: #f0fafb;
+      padding: 0.1rem 0.8rem;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #10343d;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #24555b;
+      max-width: 640px;
+      margin: 0.3rem auto 0;
+    }
+
+    /* 承接段落 */
+    .intro-block {
+      background: white;
+      border-radius: 1.8rem;
+      padding: 1.8rem 2rem;
+      margin: 1.5rem 0 2rem 0;
+      box-shadow: 0 4px 12px rgba(43, 122, 126, 0.06);
+    }
+
+    .intro-block p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .intro-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .intro-block .accent-link {
+      color: #1b6b70;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 2px solid #aad0d2;
+      transition: border-color 0.2s;
+    }
+
+    .intro-block .accent-link:hover {
+      border-bottom-color: #1b6b70;
+    }
+
+    /* 网格卡片 —— 特点列表 */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      border-radius: 1.6rem;
+      padding: 1.6rem 1.2rem 1.2rem 1.2rem;
+      box-shadow: 0 6px 12px -6px rgba(32, 88, 90, 0.08);
+      border: 1px solid #e0f0f3;
+      transition: box-shadow 0.2s, transform 0.1s;
+    }
+
+    .feature-card:hover {
+      box-shadow: 0 8px 18px -6px rgba(32, 88, 90, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .feature-card .card-num {
+      display: inline-block;
+      background: #2b7a7e;
+      color: white;
+      font-weight: 600;
+      font-size: 0.75rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      line-height: 1.6rem;
+      text-align: center;
+      border-radius: 40px;
+      margin-bottom: 0.7rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #10343d;
+      margin-bottom: 0.35rem;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: #2e5a5e;
+      line-height: 1.5;
+    }
+
+    /* 温和结尾 + 场景提示 */
+    .closing-section {
+      background: #e9f3f5;
+      border-radius: 2rem;
+      padding: 1.8rem 2rem;
+      margin: 1.8rem 0 2rem 0;
+      border: 1px solid #d2e4e7;
+    }
+
+    .closing-section h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #134249;
+      margin-bottom: 0.6rem;
+    }
+
+    .closing-section p {
+      font-size: 0.95rem;
+      color: #1d4147;
+      margin-bottom: 0.8rem;
+    }
+
+    .closing-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-note {
+      display: inline-block;
+      background: white;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      color: #1b6b70;
+      border: 1px solid #bcd6d9;
+      margin-top: 0.3rem;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #d2e4e7;
+      margin: 0.8rem 0;
+    }
+
+    .footnote {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #5b8286;
+      margin-top: 0.6rem;
+    }
+
+    /* 移动端适配 */
+    @media (max-width: 640px) {
+      body {
+        padding: 0 0.75rem 2rem 0.75rem;
+      }
+
+      .hero {
+        padding: 2rem 1.2rem;
+        margin: 1rem 0 1.5rem 0;
+      }
+
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .intro-block {
+        padding: 1.4rem 1.2rem;
+        border-radius: 1.4rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+      }
+
+      .feature-card {
+        padding: 1.2rem 1rem;
+      }
+
+      .closing-section {
+        padding: 1.4rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero h1 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+  <!-- 开场短句 hero -->
+  <div class="hero">
+    <em>信息索引 · 整理视角</em>
+    <h1>从资料到脉络</h1>
+    <p>一页卡片式的记录，梳理围绕 mk体育 的内容线索与结构备忘。</p>
+  </div>
+
+  <!-- 承接段落 自然嵌入链接 -->
+  <div class="intro-block">
+    <p>在日常的资料整理中，平台的组织方式与内容呈现往往会影响信息检索的效率。无论是赛事情报、队伍数据还是资讯聚合，一个清晰的索引结构能帮助使用者更快定位到需要的部分。而以<a href="https://main--mksport.com" class="accent-link">mk体育</a>为参照的整理思路，提供了一种将零散信息按主题与标签归类的框架，适合用来搭建个人或团队的知识库基底。</p>
+    <p>下面这份卡片式列表归纳了在梳理过程中较常关注的几个模块，每个模块都可作为独立的信息簇进一步展开。这些特点并非功能罗列，而是从整理习惯中沉淀下来的分类锚点。</p>
+  </div>
+
+  <!-- 特点网格卡片 (4项) -->
+  <div class="features-grid">
+    <div class="feature-card">
+      <span class="card-num">1</span>
+      <h3>赛事时序</h3>
+      <p>按日期与联赛维度整理赛程，辅助建立赛事日历式的查阅路径，可嵌套标签与状态标记。</p>
+    </div>
+    <div class="feature-card">
+      <span class="card-num">2</span>
+      <h3>队伍 &amp; 选手笔记</h3>
+      <p>将 roster、近期战绩与关键数据以独立卡片存档，便于交叉引用与历史对比。</p>
+    </div>
+    <div class="feature-card">
+      <span class="card-num">3</span>
+      <h3>资讯摘要</h3>
+      <p>抽取新闻、采访或分析中的核心句，建立简短摘要库，降低二次检索时的重复阅读成本。</p>
+    </div>
+    <div class="feature-card">
+      <span class="card-num">4</span>
+      <h3>标签分类</h3>
+      <p>利用多层级标签（赛事类型、地区、赛季等）为资料集附加过滤维度，可快速筛选或重组。</p>
+    </div>
+  </div>
+
+  <!-- 温和结尾 + 场景提示 / FAQ 摘要风格 -->
+  <div class="closing-section">
+    <h2>整理场景与常见备忘</h2>
+    <p>在资料积累过程中，很多人会面临信息散乱、版本混淆或找不到原始出处的情况。基于上述特点，可以尝试先建立最小单元——比如从某个联赛的赛季笔记开始，然后逐步扩展标签范围。</p>
+    <p>FAQ 摘录一则：<span class="faq-note">问：整理时如何保持结构灵活？建议用「卡片 + 标签」替代传统文件夹，方便后期重组。</span></p>
+    <hr>
+    <p>温和收束：信息整理不是一次性的工程，而是伴随使用习惯不断微调的过程。mk体育 所代表的索引框架，更像是一张可反复修改的草图，帮助我们在庞杂的数据中保持条理。</p>
+  </div>
+
+  <div class="footnote">
+    · 本页为资料索引示意 · 卡片内容基于通用整理逻辑 ·
+  </div>
+</div>
+</body>
+</html>
